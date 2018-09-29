@@ -1,0 +1,16 @@
+@include breakpoint-set("to ems", true);
+
+
+$largest: 1280px;
+$large: 920px;
+$medium: 780px;
+$small: 560px;
+
+$gray-lighter: rgb(224,224,224);
+$gray-light: rgb(176,176,176);
+$gray: rgb(128,128,128);
+$gray-dark: rgb(80,80,80);
+$gray-darker: rgb(32,32,32);
+$pink: #F864A6;
+
+

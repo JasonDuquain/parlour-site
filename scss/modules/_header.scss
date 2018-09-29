@@ -1,0 +1,217 @@
+
+.header {
+    //height: 100vh;
+    background-image: url('../img/plain-bg.jpg');
+    padding: 1em 2em;
+    
+    &__grid {
+        height: calc(100vh - 2em);
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto 1fr;
+    }
+    
+    &__nav {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 1em 0;
+    }
+    
+    
+    &__logo {
+        
+    }
+    
+    &__logo-link {
+        
+    }
+    
+    &__logo-img {
+        width: 170px;
+        height: auto;
+    }
+    
+    /*why doesnt this stretch to its container*/
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    
+    &__list::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 2em);
+        height: 3px;
+        width: 100%;
+        background-image: linear-gradient(to right, transparent, rgba($gray-light, .5), transparent);
+    }
+    
+    &__item {
+        
+    }
+    
+    /*why doesnt the header__list stretch to its container*/
+    &__item:not(:last-of-type) {
+        margin-right: 4em;
+    }
+    
+    &__link {
+        font-family: 'Quicksand', sans-serif;
+        color: inherit;
+        text-transform: uppercase;
+        font-weight: 500;
+        position: relative;
+        transition: all 350ms ease-out;
+    }
+    
+    &__link:hover {
+        color: $gray-darker;
+    }
+    
+    &__link::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        left: 50%;
+        right: 50%;
+        top: -.75em;
+        background-color: $pink;
+        transition: all 350ms ease-out;
+    }
+    
+    &__link:hover::before {
+        left: 0;
+        right: 0;
+    }
+    
+    
+    &__button {
+        color: #fff;
+        text-transform: uppercase;
+        background-color: $gray;
+        padding: .75em 1.75em;
+        border-radius: 3px;
+    }
+    
+    
+    &__hero {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    
+    &__hero-left {
+        grid-column: 1 / 2;
+        align-self: center;
+    }
+    
+    &__hero-heading {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 7.5em;
+        line-height: 1;
+        color: $pink;
+        letter-spacing: 2px;
+    }
+    
+    &__hero-heading-secondary {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 2.1em;
+        color: $gray;
+        text-transform: lowercase;
+        font-weight: 300;
+        margin-bottom: 2em;
+    }
+    
+    &__hero-list {
+        margin-bottom: 2.5em;
+    }
+    
+    &__hero-item {
+        font-style: italic;
+    }
+    
+    &__hero-item:not(:last-of-type) {
+        margin-bottom: .75em;
+    }
+    
+    &__hero-btn-wrap {
+        
+    }
+    
+    &__hero-btn {
+        color: #fff;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: .5em 1.75em;
+        border-radius: 999em;
+    }
+    
+    &__hero-btn:first-of-type {
+        background-color: $pink;
+        margin-right: 1em;
+    }
+    
+    &__hero-btn:last-of-type {
+        background-color: $gray;
+    }
+    
+    
+    
+    &__hero-right {
+        grid-column: 2 / 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    /*scale images so the grid does not expand horizonally and make the grid-left smaller*/
+    &__hero-img {
+        width: 200px;
+        height: auto;
+        transform: scale(1.6);
+    }
+    
+    &__hero-img:first-of-type {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        align-self: end;
+        justify-self: end;
+    }
+    
+    &__hero-img:nth-of-type(2) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        align-self: end;
+        justify-self: start;
+    }
+    
+    &__hero-img:nth-of-type(3) {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    
+    &__hero-img:nth-of-type(4) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+        align-self: center;
+        justify-self: end;
+    }
+    
+    &__hero-img:last-of-type {
+        grid-column: 3 / 4;
+        grid-row: 2 / 4;
+        align-self: center;
+        justify-self: start;
+    }
+    
+    
+    
+}
+

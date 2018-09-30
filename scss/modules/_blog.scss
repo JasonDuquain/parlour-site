@@ -1,0 +1,112 @@
+
+.blog {
+    
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-gap: 2em;
+        max-width: 1280px;
+        margin: 0 auto;
+        align-items: center;
+    }
+    
+    &__wrap { 
+        
+    }
+    
+    &__main {
+        width: 400px;
+        position: relative;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba($gray,.3);
+        transition: transform 300ms ease-in;
+    }
+    
+    /*&__main:hover {
+        transform: translateY(-.4em);
+    }
+    */
+    
+    &__image-wrap {
+        position: relative;
+    }
+    
+    &__image-wrap::after {
+        position: absolute;
+        content: "";
+        background-image: url('../img/blog-entry-overlay.svg');
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 52px; /*will not fit perfectly when width changes - update this soon*/
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    
+    &__image {
+        display: block;
+    }
+    
+    &__description {
+        padding: 2em;
+        background-color: #fff;
+    }
+
+    &__description-heading {
+        font-size: 1.2em;
+         margin: 1em 0 .5em 0;
+        text-transform: capitalize;
+         font-family: 'Quicksand', sans-serif;
+         color: $gray-darker;
+         transition: transform 300ms ease-out;
+    }
+    
+    &__description-information {
+        color: $gray;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+    
+    &__summary {
+        color: $gray;
+        margin-bottom: 2em;
+        hyphens: auto;
+        
+    }
+    
+    &__link {
+        color: $gray-darker;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: inline-block;
+        position: relative;
+        padding-bottom: .3em;
+    }
+    
+    &__link:hover {
+        color: $gray-dark;
+        transition: color 300ms ease-in;
+    }
+    
+    &__link::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        content: "";
+        height: 1px;
+        transform: scaleX(0);
+        transform-origin: left center;
+        z-index: 88;
+        background-color: currentColor;
+        transition: transform 350ms ease-out;
+    }
+    
+    &__link:hover::after {
+        transform: scaleX(1);
+    }
+    
+    
+    
+}
+

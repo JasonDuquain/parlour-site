@@ -1,0 +1,120 @@
+
+.services {
+    background-color: #f0e7e7;
+    
+    &__grid {
+       display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-gap: 2em;
+    }
+    
+    &__wrap { 
+        
+    }
+    
+    &__main {
+        width: 400px;
+        border-radius: 50%/100px 100px 0 0;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 2px 5px rgba($gray-light, .3);
+    }
+    
+    &__main::before {
+        color: #fff;
+        content: "\f061";
+        position: absolute;
+        font-family: "FontAwesome";
+        border-radius: 50%;
+        background-color: $pink;
+        font-size: 1em;
+        padding: 1.2em;
+        bottom: .5em;
+        left: 50%;
+        transform: translateX(-50%) rotate(-360deg);
+        opacity: 0;
+        transition: all 450ms ease-out;
+    }
+    
+    &__main::after {
+        color: #fff;
+        content: "\f218";
+        position: absolute;
+        font-family: "FontAwesome";
+        border-radius: 50%;
+        background-color: $pink;
+        font-size: 1em;
+        bottom: .85em;
+        padding: .8em;
+        left: 42%;
+        transform: translateX(-50%) rotate(-360deg) ;
+        opacity: 0;
+        transition: all 450ms ease-out;
+    }
+    
+    &__main:hover::before {
+        opacity: 1;
+        transform: translateX(-50%) rotate(0);
+        left: 90%;
+    }
+    
+    &__main:hover::after {
+        opacity: 1;
+        transform: translateX(-50%) rotate(0);
+        left: 82%;
+    }
+    
+    &__image {
+        display: block;
+    }
+    
+    &__description {
+        padding: 2em;
+        background-color: #fff;
+    }
+    
+    &__description::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 30%;
+        left: 0;
+        background-image: linear-gradient(to top, rgba(255,255,255,.8), transparent);
+        opacity: 0;
+        transition: all ease-in 400ms;
+    }
+    
+    &__description:hover::after {
+        top: -10%;
+        right: 0;
+        bottom: 30%;
+        left: 0;
+        opacity: 1;
+    }
+    
+    &__description-heading {
+         margin: 1.5em 0 .5em 0;
+         text-align: center;
+         font-family: 'Quicksand', sans-serif;
+         color: $gray-darker;
+         transition: transform 300ms ease-out;
+    }
+    
+    &__description:hover .services__description-heading {
+        transform: translateY(-2em);
+    }
+    
+    &__description-information {
+        color: $gray;
+        text-align: center;
+        transition: transform 300ms ease-out;
+    }
+    
+    &__description:hover .services__description-information {
+        transform: translateY(-2em);
+    }
+    
+}
+
+

@@ -1,0 +1,39 @@
+
+.video {
+    background-image: url('../img/img-video-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 10em 2em;
+    margin-top: 5em;
+    
+    &__wrap {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__heading {
+        font-size: 2.7em;
+        text-transform: uppercase;
+        font-family: 'Quicksand', sans-serif;
+        margin-right: .5em;
+    }
+    
+    &__icon {
+        font-size: 50px !important;
+        display: inline-block;
+        font-family: "FontAwesome";
+        cursor: pointer;
+        position: relative;
+        transition: transform 250ms ease-out;
+    }
+   
+    &__icon:hover {
+        transform: scale(1.1);
+        box-shadow: 1px 2px 2px rgba($gray-dark, .8);
+    }
+    
+}
+
+

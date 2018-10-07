@@ -1,0 +1,65 @@
+
+.discuss {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1280px;
+    margin: 0 auto;
+    
+    &__img {
+        background-image: url('../img/discuss.jpg');
+        background-size: cover;
+    }
+    
+    &__text {
+        padding: 3em 2em;
+    }
+    
+    &__pre-heading {
+        font-size: 1em;
+        text-transform: none;
+        text-align: left;
+        color: $gray-dark;
+    }
+    
+    &__heading {
+        font-size: 1.8em;
+        text-transform: none;
+        text-align: left;
+    }
+    
+    &__key {
+        margin: .5em 0 3em 0;
+    }
+    
+    &__para {
+        line-height: 1.6;
+        color: $gray;
+    }
+    
+    &__para:not(:last-of-type) {
+        margin-bottom: 1.6em;
+    }
+    
+    &__link {
+        display: inline-block;
+        border-radius: 3px;
+        color: #fff;
+        margin-top: 2em;
+        padding: .75em 1em;
+        background-color: $pink;
+        transform: background-color 300ms ease-out;
+    }
+    
+    &__link::after {
+        content: "\f054";
+        font-family: FontAwesome;
+        margin-left: 1em;
+    }
+    
+    &__link:hover {
+        background-color: darken($pink, 10%);
+    }
+    
+}
+

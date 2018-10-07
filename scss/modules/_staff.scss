@@ -1,5 +1,5 @@
 
-.services {
+.staff {
     background-color: #f0e7e7;
     padding-bottom: 12em;
     
@@ -23,52 +23,20 @@
         box-shadow: 0 2px 5px rgba($gray-light, .3);
     }
     
-    &__main::before {
-        color: #fff;
-        content: "\f061";
-        position: absolute;
-        font-family: "FontAwesome";
-        border-radius: 50%;
-        background-color: $pink;
-        font-size: 1em;
-        padding: 1.2em;
-        bottom: .5em;
-        left: 50%;
-        transform: translateX(-50%) rotate(-360deg);
-        opacity: 0;
-        transition: all 450ms ease-out;
+    &__main:hover .staff__image {
+        display: none;
     }
     
-    &__main::after {
-        color: #fff;
-        content: "\f218";
-        position: absolute;
-        font-family: "FontAwesome";
-        border-radius: 50%;
-        background-color: $pink;
-        font-size: 1em;
-        bottom: .85em;
-        padding: .8em;
-        left: 42%;
-        transform: translateX(-50%) rotate(-360deg) ;
-        opacity: 0;
-        transition: all 450ms ease-out;
-    }
-    
-    &__main:hover::before {
-        opacity: 1;
-        transform: translateX(-50%) rotate(0);
-        left: 90%;
-    }
-    
-    &__main:hover::after {
-        opacity: 1;
-        transform: translateX(-50%) rotate(0);
-        left: 82%;
+    &__main:hover .staff__image-2 {
+        display: block;
     }
     
     &__image {
         display: block;
+    }
+    
+     &__image-2 {
+        display: none;
     }
     
     &__description {
@@ -81,7 +49,7 @@
         content: "";
         top: 0;
         right: 0;
-        bottom: 30%;
+        bottom: 20%;
         left: 0;
         background-image: linear-gradient(to top, rgba(255,255,255,.8), transparent);
         opacity: 0;
@@ -89,7 +57,7 @@
     }
     
     &__description:hover::after {
-        top: -10%;
+        top: 20%;
         right: 0;
         bottom: 30%;
         left: 0;
@@ -104,20 +72,46 @@
          transition: transform 300ms ease-out;
     }
     
-    &__description:hover .services__description-heading {
+    &__description:hover .staff__description-heading {
         transform: translateY(-2em);
     }
     
     &__description-information {
         color: $gray;
         text-align: center;
+        margin-bottom: 1rem;
         transition: transform 300ms ease-out;
     }
     
-    &__description:hover .services__description-information {
+    &__description:hover .staff__description-information {
         transform: translateY(-2em);
     }
     
+    &__social {
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(1em);
+        transition: all 300ms ease-out;
+    }
+    
+    &__description:hover .staff__social {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(-2em);
+    }
+    
+    &__icon {
+        margin-right: 1em;
+        color: $gray;
+        font-size: 1.3em;
+        transition: color 300ms ease-out;
+    }
+    
+    &__icon:hover {
+        color: $pink;
+    }
+    
+    
 }
-
 

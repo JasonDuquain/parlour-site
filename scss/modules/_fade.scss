@@ -1,0 +1,51 @@
+
+.fade {
+    background-color: #f0e7e7;
+    background-image: url('../img/elementor.svg');
+    background-size: 80% 20%;
+    background-repeat: repeat-x;
+    
+    &__wrap {
+        padding-top: 5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    
+    &__heading {
+        font-family: 'Quicksand', sans-serif;
+        margin-bottom: 1rem;
+    }
+    
+    &__para {
+        width: 70%;
+        text-align: center;
+        margin-bottom: 1.75rem;
+        color: $gray;
+    }
+    
+    &__link {
+        display: block;
+        color: white;
+        background-color: $pink;
+        padding: .75em 1.75em;
+        border-radius: 3px;
+        transition: background-color 300ms ease-in;
+        
+        &::after {
+            content: "\f073";
+            font-family: FontAwesome;
+            margin-left: 1rem;
+        }
+        
+        &:hover {
+            background-color: $gray;
+        }
+    }
+    
+}
+
+
